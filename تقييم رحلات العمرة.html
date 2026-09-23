@@ -1,0 +1,262 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>تقييم رحلات العمرة</title>
+<meta name="description" content="خدمة تقييم رحلات العمرة والبلاغات عبر واتساب">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #f3f5f8;
+    --surface: #ffffff;
+    --surface-2: #eaeef3;
+    --text: #142033;
+    --muted: #5b6b81;
+    --border: #dde3ea;
+    --accent: #a8790c;
+    --accent-ink: #ffffff;
+    --accent-2: #3f7a78;
+    --shadow: 0 1px 2px rgba(20,32,51,.04), 0 8px 24px rgba(20,32,51,.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1622;
+      --surface: #141f30;
+      --surface-2: #1b2a3f;
+      --text: #eef2f7;
+      --muted: #93a3b8;
+      --border: #24354d;
+      --accent: #d3a94a;
+      --accent-ink: #14202f;
+      --accent-2: #6bb0ac;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1622;
+    --surface: #141f30;
+    --surface-2: #1b2a3f;
+    --text: #eef2f7;
+    --muted: #93a3b8;
+    --border: #24354d;
+    --accent: #d3a94a;
+    --accent-ink: #14202f;
+    --accent-2: #6bb0ac;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 1.7;
+    padding-inline: 20px;
+  }
+
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding-block: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .hero { position: relative; text-align: center; padding-block: 12px 8px; }
+
+  .crescent {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    color: var(--accent);
+  }
+  .crescent svg { width: 100%; height: 100%; display: block; }
+
+  .eyebrow {
+    font-size: .8rem;
+    letter-spacing: .06em;
+    color: var(--accent-2);
+    font-weight: 700;
+    margin: 0 0 10px;
+  }
+
+  h1 {
+    font-family: "Aref Ruqaa", "Tajawal", serif;
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    font-weight: 700;
+    margin: 0 0 18px;
+    text-wrap: balance;
+    color: var(--text);
+  }
+
+  .lede {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 720px) {
+    .features { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 26px 22px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--surface-2);
+    color: var(--accent-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card .icon svg { width: 22px; height: 22px; }
+
+  .card h3 { margin: 4px 0 0; font-size: 1.1rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .94rem; }
+
+  .how h2 {
+    font-family: "Aref Ruqaa", "Tajawal", serif;
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 0 0 28px;
+  }
+
+  .how ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .how li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+
+  .how .num {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .how h4 { margin: 0 0 4px; font-size: 1rem; }
+  .how p { margin: 0; color: var(--muted); font-size: .93rem; }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .85rem;
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+  }
+</style>
+
+<div class="page">
+  <header class="hero">
+    <div class="crescent" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none">
+        <path d="M40 8C28 10 20 20 20 32C20 44 28 54 40 56C34.5 58.5 28.4 60 22 60C9.85 60 0 46.5 0 32C0 17.5 9.85 4 22 4C28.4 4 34.5 5.5 40 8Z" fill="currentColor" transform="translate(12,0)"/>
+      </svg>
+    </div>
+    <p class="eyebrow">خدمة رقمية عبر واتساب</p>
+    <h1>تقييم رحلات العمرة والبلاغات</h1>
+    <p class="lede">
+      نظام تشغيلي يتيح لضيوف الرحمن تقييم تجربة رحلتهم وتقديم بلاغاتهم مباشرة عبر واتساب،
+      بخمس لغات، مع متابعة حية لفرق التشغيل لتحسين جودة الخدمة أولاً بأول.
+    </p>
+  </header>
+
+  <section class="features">
+    <article class="card">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 16l7-11 5 6 3-4 5 9H2z"/><path d="M2 20h20"/></svg>
+      </div>
+      <h3>تقييم الرحلة</h3>
+      <p>استبيان قصير يغطي الطيران والنقل والفنادق ومناديب الخدمة والرضا العام، برسائل واتساب تفاعلية.</p>
+    </article>
+    <article class="card">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v12H8l-4 4V4z"/></svg>
+      </div>
+      <h3>البلاغات والشكاوى</h3>
+      <p>استقبال فوري للبلاغات نصاً أو صورة أو مقطعاً صوتياً، وربطها برقم جواز المعتمر تلقائياً.</p>
+    </article>
+    <article class="card">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 20V10M10 20V4M17 20v-7"/></svg>
+      </div>
+      <h3>لوحة تحكم حية</h3>
+      <p>متابعة لحظية لنسب الرضا وحالة البلاغات ومؤشرات الأداء دون أي تأخير.</p>
+    </article>
+  </section>
+
+  <section class="how">
+    <h2>كيف تعمل الخدمة</h2>
+    <ol>
+      <li>
+        <span class="num">١</span>
+        <div>
+          <h4>اختيار اللغة</h4>
+          <p>يبدأ المعتمر المحادثة عبر واتساب ويختار لغته من بين خمس لغات مدعومة.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">٢</span>
+        <div>
+          <h4>التحقق من رقم الجواز</h4>
+          <p>يُدخل رقم جواز السفر للتحقق من بياناته ضمن قوائم الرحلة المسجّلة.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">٣</span>
+        <div>
+          <h4>التقييم أو البلاغ</h4>
+          <p>يختار بين تقييم الرحلة أو تقديم بلاغ، وتُحفظ استجابته فوراً لدى فريق المتابعة.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <footer>
+    خدمة تقييم رحلات العمرة والبلاغات — نظام داخلي لتحسين تجربة ضيوف الرحمن ومتابعة رحلاتهم.
+  </footer>
+</div>
+
+</body></html>
